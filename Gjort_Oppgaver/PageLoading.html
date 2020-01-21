@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+        <style>
+            h1 {
+                background-color: darkgray;
+                color: lightcoral;
+                padding: 5px;
+                border: 1px;
+            }
+            h2 {
+                background-color: goldenrod; 
+                color: purple;
+                padding: 5px;
+                border: 1px;
+            }
+            p  {
+                background-color: lightgray;
+                color: red;
+                padding: 5px;
+                border: 1px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1 id="checktext" oncontextmenu="Checkontextmenu()">--->First line goes here<---</h1>
+        <h2 id="checkondblclick" ondblclick="Checkondblclick()">CLICK ME</h1>
+        <input type="text" id="checkkeydown" onkeydown="Checkonkeydown()">Press Down Plese</input>
+
+        <script>
+        function Checkondblclick() {
+        console.log('<li>ondblclick</li>')
+        }
+        function Checkontextmenu() {
+        console.log('<li>oncontextmenu</li>')
+        }
+        function Checkonkeydown() {
+        console.log('<li>onkeydown</li>')
+        }
+        </script>
+    </body>
+</html>

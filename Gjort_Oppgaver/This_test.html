@@ -1,0 +1,57 @@
+<html>
+    <head>
+
+        <style>
+        .div1 {box-sizing: border-box;
+         border-radius: 2px;
+         border: black 1px;
+         padding: 2px;
+         background-color: darkorchid;
+         border-bottom-left-radius: groove 2px;
+         border-bottom-right-radius: groove 2px;
+        }
+        th { 
+            width: 100px;
+        }
+        td {
+            text-align: center;
+        }
+        </style>
+
+    </head>
+    <body>
+
+<table>
+    <tr>
+        <th>First row</th>
+        <th>Second row</th>
+    </tr>
+    <tr>
+        <td onmouseover="Changeonmouseover(this)" onmouseout="Changeonmouseout(this)">o</td>
+        <td onmouseover="Changeonmouseover(this)" onmouseout="Changeonmouseout(this)">o</td>
+    </tr>
+    <tr>
+        <td onmouseover="Changeonmouseover(this)" onmouseout="Changeonmouseout(this)">o</td>
+        <td onmouseover="Changeonmouseover(this)" onmouseout="Changeonmouseout(this)">o</td>
+    </tr>
+</table>   
+
+<h1 onmouseover="AfunctionforColor(this)">Click this header to change the text and color</h1>
+<h1 onmouseover="AfunctionforText(this)">Click this header to change the text</h1>
+
+<script>
+function Changeonmouseout(Mouse_out) {
+    Mouse_out.innerHTML = 'o';
+}
+function Changeonmouseover(Mouse_over) {
+    Mouse_over.innerHTML = 'x';
+}
+function AfunctionforColor(Change_color){
+    Change_color.innerHTML = '<h1 class="div1">text and color has changed</h1>';
+}
+function AfunctionforText(Change_text){
+    Change_text.innerHTML = 'This is the other text';
+}
+</script>
+    </body>
+</html>

@@ -38,32 +38,40 @@
          }
     
 
+
     </style>
 </head>
 <body>
 
 <h1 style="color:red">The M1_TEST!</h1>
 
-<div1 class="div1" style="background-color: blue"><p style="color:black">This is Blue1</p></div1>
-<div1 class="div1" style="background-color: royalblue"><p style="color:black">This is Blue2</p></div1>
-<div1 class="div1" style="background-color: skyblue"><p style="color:black">This is Blue3</p style="color:darkgray"></div1>
+<a id="button1"></a>
 
-<div2 class="div2" style="background-color: mediumspringgreen"><p style="color:gray">This is Green1</p style="color:darkgray"></div2>
-<div2 class="div2" style="background-color: greenyellow"><p style="color:gray">This is Green2</p style="color:darkgray"></div2>
-<div2 class="div2" style="background-color: palegreen"><p style="color:gray">This is Green3</p style="color:darkgray"></div2>
+<div1 class="div1" style="background-color: blue"><p style="color:black" onclick="ButtonPress()">This is Blue</p></div1>
+<div1 class="div1" style="background-color: royalblue"><p style="color:black" onclick="ButtonPress()">This is Blue</p></div1>
+<div1 class="div1" style="background-color: skyblue"><p style="color:black" onclick="ButtonPress()">This is Blue</p></div1>
 
-<div3 class="div3" style="background-color: purple"><p style="color:lightgray">This is Purple1</p style="color:darkgray"></div3>
-<div3 class="div3" style="background-color: rebeccapurple"><p style="color:lightgray">This is Purple2</p style="color:darkgray"></div3>
-<div3 class="div3" style="background-color: blueviolet"><p style="color:lightgray">This is Purple3</p style="color:darkgray"></div3>
+<div2 class="div2" style="background-color: mediumspringgreen"><p style="color:gray" onclick="ButtonPress()">This is Green</p></div2>
+<div2 class="div2" style="background-color: greenyellow"><p style="color:gray" onclick="ButtonPress()">This is Green</p></div2>
+<div2 class="div2" style="background-color: palegreen"><p style="color:gray" onclick="ButtonPress()">This is Green</p></div2>
 
+<div3 class="div3" style="background-color: purple"><p style="color:lightgray" onclick="ButtonPress()">This is Purple</p></div3>
+<div3 class="div3" style="background-color: rebeccapurple"><p style="color:lightgray" onclick="ButtonPress()">This is Purple</p></div3>
+<div3 class="div3" style="background-color: blueviolet"><p style="color:lightgray" onclick="ButtonPress()">This is Purple</p></div3>
 
-
-<img src="/Images/ni_no_kuni_1.jpg" width="400" height="500" alt="Oups the image your looking for is missing">
-
+<audio id="button1" controls="controls"> 
+    <source src="JOURNEYS_FFXIV_008.mp3" type="/audio/mpeg"> </audio>
 
     <script>
+     function ButtonPress() {
     
-    
+    document.getElementById('button1').innrtHTML = 'This is a Button';
+
+    document.getElementById('button1').innrtHTML = 'This is a Button';
+
+    document.getElementById('button1').innrtHTML = 'This is a Button';
+
+     }
     </script>
 </body>
 
