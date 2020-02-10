@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+           div {box-sizing: border-box;
+                color:cadetblue;
+                background-color:aqua;
+                padding: 10px;
+                float: left;
+                clear: left;
+                margin: 4px;
+                border: groove gray 2.5px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            h1 {box-sizing: border-box;
+                color:cadetblue;
+                background-color:aqua;
+                padding: 10px;
+                float: left;
+                clear: left;
+                margin: 4px;
+                border: groove gray 2.5px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+        </style>
+    </head>
+    <body onload="Clickthis()">
+<div id="Clickbutton"></div>
+
+<img src="Images/ni_no_kuni_1.jpg" width="720" height="620" >
+
+
+        <script>
+    function Clickthis(Button){
+              alert(document.getElementById('Clickbutton').innerHTML += '' + new Date().toTimeString());       
+           }
+
+        var output = document.getElementById('Clickbutton').innerHTML += '' + new Date().toTimeString();
+        
+        </script>
+
+    </body>
+</html>

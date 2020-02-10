@@ -1,0 +1,61 @@
+<html>
+    <head>
+    <style>
+          div {box-sizing: border-box;
+              width: 70px;
+              height: 70px;
+              border: groove purple 10px;
+              margin: 2px;
+              float: left;
+              background-color: aqua;
+              text-align: center;
+              color: orangered;
+          }
+           .Clear {
+               clear: left;
+           }
+           h1 {box-sizing: border-box;
+              text-align: center;
+              width: 220px;
+              height: 80px;
+              border: solid crimson 20px;
+              background-color:aquamarine;
+           }
+
+
+    </style>
+    </head>
+    <body>
+        <h1 id="Header1"></h1>
+
+        <div class="Clear" onclick="numberCode(this)">1</div>
+        <div onclick="numberCode(this)">2</div>
+        <div onclick="numberCode(this)">3</div>
+
+        <div class="Clear" onclick="numberCode(this)">4</div>
+        <div onclick="numberCode(this)">5</div>
+        <div onclick="numberCode(this)">6</div>
+
+        <div class="Clear" onclick="numberCode(this)">7</div>
+        <div onclick="numberCode(this)">8</div>
+        <div onclick="numberCode(this)">9</div>
+
+        <script>
+            let output = document.getElementById('Header1');
+            let correctCode = '3189';
+            let enteredSoFar = '';
+            
+            function numberCode(numberthis) {
+          output.innerHTML += numberthis.innerHTML;
+          enteredSoFar += numberthis.innerHTML;
+
+      if (!correctCode.startsWith(enteredSoFar) && enteredSoFar.length == 4) {
+        output.innerText = '';
+      } else if (correctCode.startsWith(enteredSoFar) && enteredSoFar.length == 4) { output.innerText = 'Open!';
+      } else if (enteredSoFar.length == 5) { output.innerText = '';
+      enteredSoFar = '';
+      }
+             }
+            </script>
+    </body>
+</html>

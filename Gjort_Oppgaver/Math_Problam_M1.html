@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            p {box-sizing: border-box;
+               background-color:deepskyblue;
+               color:black;
+               border: solid darkmagenta 15px;
+               padding: 1px;
+               border-top-left-radius: groove 5px;
+               border-top-right-radius: groove 5px;
+               border-bottom-left-radius: groove 5px;
+               border-bottom-right-radius: groove 5px;
+               width: 580;
+               height: 60;
+            }
+        </style>
+    </head>
+    <body>
+
+<p>This is going to be a math problem am going to solve in javascript using variables</p>
+
+<input id="number1" type="range" min="1" max="1000" step="1" oninput="Calculate()" value="0"/>
+<input id="number2" type="range" min="1" max="1000" step="1" oninput="Calculate()" value="0"/>
+<div id="result"></div>
+
+        <script>
+            var number1input = document.getElementById('number1');
+            var number2input = document.getElementById('number2');
+            var resultdiv = document.getElementById('result');
+
+            Calculate();
+
+            function Calculate() {
+                 
+                 var numberA = parseInt(number1input.value);
+                 var numberB = parseInt(number2input.value);
+                 var numberA2 = numberA + numberA;
+                 var numberB2 = numberB + numberB;
+                 var sum = 2(numberA+numberB);
+                 var acreage = numberA * numberB;
+                 var circumference = numberA - numberB;
+
+                 resultdiv.innerHTML = '' + 
+                 numberA + '-' + numberB + '=' + circumference + '<br/>' +
+                 numberA + '*' + numberB + '=' + acreage + '<br/>' +
+                 numberA2 + '*' + '+' + numberB2 + '*' + '=' + numberA2 * numberB2;
+            }
+        </script>
+    </body>
+</html>

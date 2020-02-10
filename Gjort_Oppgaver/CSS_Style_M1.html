@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+        .input1 {
+            border: groove purple 4px;
+        }
+        .input2 {
+            background-color:royalblue;
+        }
+        .input3 {
+         font-style:oblique;
+        }
+        .input4 {
+            color: brown;
+        }
+
+
+          div.Selected::before {
+    content: "🡆";
+}
+div.Selected::after {
+    content: "🡄";
+}
+        </style>
+    </head>
+    <body> 
+
+          <div id="div1" onclick="Divtoggle(this)" class="Selected">First box</div>
+          <div onclick="Divtoggle(this)">Second box</div>
+          <div onclick="Divtoggle(this)">Third box</div>
+          <div onclick="Divtoggle(this)">Forth box</div>
+
+          <br>
+           
+          <input id="input1" type="checkbox" onchange="Inputbox(this)"/>Border-style
+          <input id="input2" type="checkbox" onchange="Inputbox(this)"/>Background-color
+          <input id="input3" type="checkbox" onchange="Inputbox(this)"/>Font-style
+          <input id="input4" type="checkbox" onchange="Inputbox(this)"/>Color
+
+        <script> 
+            
+            let ToggledDiv = document.getElementById('div1');
+
+             function Divtoggle(Divcheck1) {
+            
+            ToggledDiv.classList.remove('Selected');
+              Divcheck1.classList.toggle('Selected');
+              ToggledDiv = Divcheck1;
+
+                  input1.checked = ToggledDiv.classList.contains('input1');
+                  input2.checked = ToggledDiv.classList.contains('input2');
+                  input3.checked = ToggledDiv.classList.contains('input3');
+                  input4.checked = ToggledDiv.classList.contains('input4');
+
+
+              }
+              function Inputbox(Checkbox1) {
+               ToggledDiv.classList.toggle(Checkbox1.id);
+
+              }
+              
+        </script>
+    </body>
+</html>

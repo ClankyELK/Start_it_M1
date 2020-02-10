@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+        div {box-sizing: border-box;
+           float: left;
+           border: solid black 1px;
+           margin: 5px;
+           padding: 30px;
+           border-bottom-left-radius: 5px;
+           border-bottom-right-radius: 5px;
+           border-top-left-radius: 5px;
+           border-top-right-radius: 5px;
+        }
+        .div2 {
+            clear: left
+        }
+        h1 {box-sizing: border-box;
+           float: left;
+           border: groove gray 4px;
+           width: 238px;
+           margin: 5px;
+           padding: 30px;
+           border-bottom-left-radius: 5px;
+           border-bottom-right-radius: 5px;
+           border-top-left-radius: 5px;
+           border-top-right-radius: 5px;
+           text-align: center
+        }
+        </style>
+
+    </head>
+    <body>
+
+        <h1 id="output"></h1>
+
+        <div class="div2" style="border: solid lightgray" onclick="Lock(this)">1</div>
+        <div style="border: solid lightgray" onclick="Lock(this)">2</div class="div2">
+        <div style="border: solid lightgray" onclick="Lock(this)">3</div class="div2">
+        <div class="div2" style="border: solid lightgray" onclick="Lock(this)">4</div class="div2">
+        <div style="border: solid lightgray" onclick="Lock(this)">5</div>
+        <div style="border: solid lightgray" onclick="Lock(this)">6</div>
+        <div class="div2" style="border: solid lightgray" onclick="Lock(this)">7</div class="div2">
+        <div style="border: solid lightgray" onclick="Lock(this)">8</div>
+        <div style="border: solid lightgray" onclick="Lock(this)">9</div>
+
+        <script>
+            var output = document.getElementById('output');
+
+            function Lock(number) {
+output.innerHTML += number.innerHTML
+
+console.log(number)
+            
+            if (output.innerText == '3189'){
+            output.innerText = 'Correct!';
+            }
+            }
+            function Awnser() {
+            
+            }
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,67 @@
+<html>
+    <head>
+
+        <style>
+            div.Selected {
+                border: groove purple 1px;
+            }
+                      div.Selected::before {
+    content: "🡆";
+}
+div.Selected::after {
+    content: "🡄";
+}
+        </style>
+    </head>
+    <body>
+
+    <div id="ShowA" class="Selected" onclick="SelectedDiv(this)">Div A</div>
+    <div id="ShowB" onclick="SelectedDiv(this)">Div B</div>
+    <br>    
+    <p id="ShowResult"></p>
+    <br>
+    <input id="inputA" type="range" min="1" max="100" step="1" oninput="MathDiv(this)" value="2" />
+    <input id="inputB" type="range" min="1" max="100" step="1" oninput="MathDiv(this)" value="1" />
+
+        
+    
+        <script>
+        let numberAinput = document.getElementById('inputA');
+        let numberBinput = document.getElementById('inputB');
+        let resultdivA = document.getElementById('ShowA');
+        let resultdivB = document.getElementById('ShowB'); 
+        const Biggestdiv = document.getElementById('ShowResult');
+        let acreageDivA;
+        let acreageDivB;
+       MathDiv();
+
+        function SelectedDiv(Divselect) {
+            
+            resultdivA.classList.remove('Selected');
+              Divselect.classList.add('Selected');
+              resultdivA = Divselect;
+        }
+
+        function MathDiv(inputDiv) {
+          var numberA = parseInt(numberAinput.value);
+          var numberB = parseInt(numberBinput.value);
+
+           resultdivA.innerHTML = 'acreage = Width=' + numberA + ' * ' + 'Height=' + numberB +
+           ' = ' + acreageDivA;
+           resultdivB.innerHTML = 'acreage = Width=' + numberA + ' * ' + 'Height=' + numberB +
+            ' = ' + acreageDivB;
+        if (resultdivA == document.getElementById('ShowA')) {
+            acreageDivA = numberA * numberB;
+        } else if (resultdivA == document.getElementById('ShowB')) {
+            acreageDivB = numberB * numberA;
+        }
+        if (acreageDivA >= acreageDivB) {
+             Biggestdiv.innerHTML = 'Div A is bigger';
+        } 
+        if (acreageDivA <= acreageDivB) {
+             Biggestdiv.innerHTML = 'Div B is bigger';
+        }
+        } 
+        </script>
+    </body>
+</html>

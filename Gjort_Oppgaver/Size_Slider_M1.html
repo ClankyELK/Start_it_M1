@@ -1,0 +1,55 @@
+<html>
+    <head>    
+        <style>
+        </style>
+
+    </head>
+    <body>
+    
+    <p>Function to add size-slider and color options</p>
+
+    <input id="Sizeslider" type="range" min="80" max="400" step="8" oninput="Result()"/>
+    <br /><input id="Textbox" type="text" oninput="Result()" value="Change the text!"/>
+    <select id="Bordercolor" onchange="Result()">
+        <option value="black">Black</option>
+        <option selected value="gray">Gray</option>
+        <option value="transparent">Nothing</option>
+    </select>
+    <select id="Borderstyle" onchange="Result()">
+        <option value="solid">Solid</option>
+        <option selceted value="groove">Groove</option>
+        <option value="ridge">Ridge</option>
+    </select>
+    <div id="show"></div>
+    <div id="showhtml" style="font-family: monospace"></div>
+
+        <script>
+            var Showdiv = document.getElementById('show');
+            var Showhtmldiv = document.getElementById('showhtml');
+            var Sizeslider = document.getElementById('Sizeslider');
+            var Textbox = document.getElementById('Textbox');
+            var Colorborder = document.getElementById('Bordercolor');
+            var Styleborder = document.getElementById('Borderstyle');
+
+            Result();
+
+            function Result() {
+                var size = Sizeslider.value;
+                var text = Textbox.value;
+                var color = Colorborder.value;
+                var style = Styleborder.value;
+
+                var border = 'border: ' + color + ' ' + style + ' 10px;';
+                var width = 'width: ' + size + 'px;';
+                var height = 'height: ' + size + 'px;';
+                var borderradius = 'border-radius: ' + size + 'px;';
+                var style = 'style="' + border + width + height + '"';
+                Showdiv.innerHTML = '<div ' + style + '>' + text + '</div>';
+                Showhtmldiv.innerHTML = Showdiv.innerHTML;
+
+                console.log(style , "Show color data")
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            div {box-sizing: border-box;
+                width: 220px;
+                height: 100px;
+                border: groove purple 15px;
+                background-color: aqua;
+                color:blueviolet;
+                margin: 9px;
+                float: left;
+            }
+            h1 {
+                clear:left;
+            }
+            .Selected {box-sizing: border-box;
+                width: 220px;
+                height: 100px;
+                border: dotted purple 15px;
+                background-color: aqua;
+                color:blueviolet;
+                margin: 10px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1" onclick="ClickMe(this)"></div>
+        <div id="div2" onclick="ClickMe(this)"></div>
+        <div id="div3" onclick="ClickMe(this)"></div>
+        <h1 id="ShowHere"></h1>
+
+        <script>
+            let Show = document.getElementById('ShowHere');
+            let button1 = document.getElementById('div1');
+            let button2 = document.getElementById('div2');
+            let button3 = document.getElementById('div3');
+            let SecondClickMassage;
+            let ThirdClickMassage;
+            
+
+            function ClickMe(ClickedOn) {
+            Show.innerHTML = 'You clicked a button ';
+            if (ClickedOn == button1) Show.innerHTML += 'A';
+            else if (ClickedOn == button2) Show.innerHTML += 'B';
+            else if (ClickedOn == button3) Show.innerHTML += 'C';
+
+            if (SecondClickMassage == ClickedOn){
+             Show.innerHTML += '<br>(You clicked the button a the second time)';
+            }  
+             if (ThirdClickMassage == ClickedOn)
+             Show.innerHTML += '<br>(You clicked the same button a third time)';
+
+
+
+             ThirdClickMassage = SecondClickMassage
+             SecondClickMassage = ClickedOn;
+            
+            }
+            </script>
+    </body>
+</html>

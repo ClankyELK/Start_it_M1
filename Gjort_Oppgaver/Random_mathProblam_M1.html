@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+        <style>
+        </style>
+    </head>
+    <body>
+
+<div id="result"></div>
+
+        <script>
+        var resultdiv = document.getElementById('result');
+        randomMath();
+
+        function randomMath() {
+        var math1 = 100 + Math.floor(Math.random() * 10);
+        var math2 = 100 + Math.floor(Math.random() * 10);
+        var math3 = 30 + Math.floor(Math.random() * 10);
+        var math4 = 30 + Math.floor(Math.random() * 10);
+        var math5 = 30 + Math.floor(Math.random() * 10);
+
+        var acreage = math1 * math2;
+        var circumference = math1 - math2;
+
+        var border = 'border: ' + 'groove ' + 'purple ' + math3 + 'px;';
+        var height = ' height: ' + math4 + 'px;';
+        var width = ' width: ' + math5 + 'px;';
+        var style = 'style="' + border + height + width + '"';
+
+        resultdiv.innerHTML = '' + 
+        math1 + '-' + math2 + '=' + circumference + '<br/>' +
+        math1 + '*' + math2 + '=' + acreage + '<br/>' +
+        '<div ' + style + '>' + math3 + '</div>';
+        }
+        </script>
+    </body>
+
+</html>

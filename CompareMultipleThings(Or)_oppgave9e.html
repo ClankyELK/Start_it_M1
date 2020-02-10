@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            div {box-sizing: border-box;
+            width: 110px;
+            height: 50px;
+            margin: 8px;
+            }
+            option {
+                margin: 8px;
+            }
+            div.Selected::after {
+            content:  "⇦";
+            }
+            div.Selected::before {
+            content:  "⇨";
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div id="chk" class="Selected" onclick="DivSelect(this)">First Div</div>
+        <div onclick="DivSelect(this)">Second Div</div>
+        <div onclick="DivSelect(this)">Third Div</div>
+<select id="Sets">
+    <option value="Black">Black</option>
+    <option value="Darkblue">Darkblue</option>
+    <option value="Lightgray">Lightgray</option>
+    <option value="Lightgreen">Lightgreen</option>
+    <option value="Orangered">Orangered</option>
+</select>
+        <script>
+            let set = document.getElementById('Sets');
+            let check = document.getElementById('chk');
+
+         function DivSelect(SelectedDiv) {
+        check.classList.remove('Selected');
+        SelectedDiv.classList.toggle('Selected');
+
+        check = SelectedDiv;
+}
+            function Opt() {
+         set
+            }
+        </script>
+    </body>
+
+</html>

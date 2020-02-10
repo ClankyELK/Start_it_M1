@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <style>
+            .Divclass {box-sizing: border-box;
+                width: 200px;
+                height: 80px;
+                border: inset crimson 10px;
+                text-align: center;
+                background-color: cyan;
+                margin: 9px;
+            }
+            .Divstyle2 {box-sizing: border-box;
+                width: 200px;
+                height: 80px;
+                border: dotted crimson 10px;
+                text-align: center;
+                background-color: cyan;
+                margin: 9px;
+            }
+            input {
+                margin: 4px;
+            }
+            .Divstyle1 {box-sizing: border-box;
+                width: 200px;
+                height: 80px;
+                border: dashed orange 10px;
+                text-align: center;
+                background-color: cyan;
+                margin: 9px;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="divBox" class="Divclass" onchange="LoopOnChange()"></div>
+
+        <input type="text" id="Input1" oninput="FindfirstValue(), LoopOnChange()" value="Banana"/><br/>
+        <input type="text" id="Input2" oninput="FindfirstValue(), LoopOnChange()" value="Apple"/><br/>
+        <input type="text" id="Input3" oninput="FindfirstValue(), LoopOnChange()" value="Pear"/><br/>
+        <input type="text" id="Input4" oninput="FindfirstValue(), LoopOnChange()" value="Orange"/><br/>
+
+        <script>
+            let Infodiv = document.getElementById('divBox');
+            let txtDiv1 = document.getElementById('Input1');
+            let txtDiv2 = document.getElementById('Input2');
+            let txtDiv3 = document.getElementById('Input3');
+            let txtDiv4 = document.getElementById('Input4');
+            FindfirstValue();
+            let IntervalLooper;
+
+            const styleChanger = ['Divstyle1', 'Divstyle2', 'Divclass'];
+
+            function FindfirstValue() {
+            let txt1 = txtDiv1.value;
+            let txt2 = txtDiv2.value;
+            let txt3 = txtDiv3.value;
+            let txt4 = txtDiv4.value;
+
+              Infodiv.innerHTML = 'Sort the fruits based on there values:<br/>';
+            if (txt1 <= txt2 && txt1 <= txt3 && txt1 <= txt4) Infodiv.innerHTML += txt1;
+            else if (txt1 <= txt2) Infodiv.innerHTML += txt2;
+            else if (txt2 <= txt3) Infodiv.innerHTML += txt3;
+            else Infodiv.innerHTML += txt4;
+            }
+          function LoopOnChange() {
+              console.log('Hei!')
+              if (txtDiv1.value == 'Apple' && txtDiv2.value == 'Banana' && txtDiv3.value == 'Orange' && txtDiv4.value == 'Pear') {
+                 IntervalLooper = setInterval(Loopthis, 1000);
+              } else {
+                  Infodiv.classList.remove(...styleChanger);
+                  Infodiv.classList.add(styleChanger[2])
+                  clearInterval(IntervalLooper);
+              }
+          }  let Loopingfunction = false
+          function Loopthis() {
+        if (Loopingfunction){
+            Infodiv.classList.remove(...styleChanger);
+            Infodiv.classList.add(styleChanger[1])
+        } else {
+            Infodiv.classList.remove(...styleChanger);
+            Infodiv.classList.add(styleChanger[0])
+        }
+        Loopingfunction = !Loopingfunction
+       }
+        </script>
+    </body>
+</html>
