@@ -1,0 +1,50 @@
+        <html>
+            <head>
+                <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+            </head>
+            <body>
+                <div id="qunit"></div>
+                <div id="qunit-fixture"></div>
+                <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+                <script src="tests.js"></script>
+                <script>
+QUnit.test( "Is text length 10 ", function(assert) {
+   const actual = isThisDateValid('17.01.2020');
+   const expected = true;
+   assert.equal(actual, expected);
+  });
+
+  QUnit.test( "dotPlacement 1 and 2 ", function(assert) {
+   const actual = isDotPosValid('17.01.2020');
+   const expected = true;
+   assert.equal(actual, expected);
+  });
+
+  QUnit.test( "Year check ", function(assert) {
+   const actual = isYearValid('17.01.2020');
+   const expected = true;
+   assert.equal(actual, expected);
+  });
+
+  QUnit.test( "Month check ", function(assert) {
+   const actual = isMonthValid('17.01.2020');
+   const expected = true;
+   assert.equal(actual, expected);
+  });
+
+  QUnit.test( "Day check ", function(assert) {
+   const actual = isDayValid('28.01.2020');
+   const expected = true;
+   assert.equal(actual, expected);
+  });
+  
+  QUnit.test( "Day leap check ", function(assert) {
+   const actual = isLeapYear('29.02.2020');
+   const expected = true;
+   assert.equal(actual, expected);
+  });
+
+       </script>
+   </body>
+        </html>
+        
