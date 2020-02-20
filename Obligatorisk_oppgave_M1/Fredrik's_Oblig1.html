@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+        <script src="lib.js"></script>
+    <script>
+
+QUnit.test( "Checks if the date is a valid one. ", function(assert) {
+   const actual = strVar('26.01.2020');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if text lenght. ", function(assert) {
+   const actual = strVar('17.01.2020');
+   assert.equal(actual, true);
+  });
+  
+  QUnit.test( "Checks if dot is correct. ", function(assert) {
+   const actual = strVar('17.01.2020');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if year is valid ", function(assert) {
+   const actual = strVar('17.01.2020');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if month is valid ", function(assert) {
+   const actual = strVar('31.01.2020');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if day is valid ", function(assert) {
+   const actual = strVar('29.02.2020');
+   assert.equal(actual, true);
+  });
+    </script>
+        </body>
+
+ </html>

@@ -42,10 +42,10 @@ function isThisDateValid(date) {
 }
      function isLeapYear(chkLeapYear) {     //check if leap year is true
      let year = parseInt(chkLeapYear.substring(6));
-     let month = chkLeapYear.substring(3, 5); 
-     let day = chkLeapYear.substring(0, 2);
+     let month = parseInt(chkLeapYear.substring(3, 5)); 
+     let day = parseInt(chkLeapYear.substring(0, 2));
      let isItLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
-       if (day == '29' && month == '02' && isItLeapYear == true) {
+       if (day == 29 && month == 02 && isItLeapYear == true) {
            return true
         } else
          { return false }

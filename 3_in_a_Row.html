@@ -1,0 +1,66 @@
+<html>
+    <head>
+        
+        <style>
+           
+       div {
+           border:groove blueviolet 25px;
+           background-color: peru;
+           width: 30px;
+           height: 15px;
+           padding: 50px;
+           margin: 8px;
+
+           color:transparent;
+           text-shadow:0 0 0 green;
+           font-size: 30px;
+           text-align: center;
+           float:left;
+           vertical-align: middle;
+           user-select: none;
+       } 
+   .thisDiv {
+       clear:left;
+   }
+        </style>
+    </head>
+    <body>
+
+    <div class="thisDiv" onclick="equal3(this)"></div>
+    <div onclick="equal3(this)"></div>
+    <div onclick="equal3(this)"></div>
+
+    <div class="thisDiv" onclick="equal3(this)"></div>
+    <div onclick="equal3(this)"></div>
+    <div onclick="equal3(this)"></div>
+    
+    <div class="thisDiv" onclick="equal3(this)"></div>
+    <div onclick="equal3(this)"></div>
+    <div onclick="equal3(this)"></div>
+      
+    <script>
+        function equal3 (player) {  //adds the "player" to the "game"
+           
+            if (player.innerHTML == ''){
+                player.innerHTML = '⭕'
+                npc(); 
+            } 
+        }
+            function npc() {       //adds the "computer" to the "game"
+                let divs1 = document.getElementsByTagName('div');
+                let divs2 = new Array();
+            for (let i = 0; i < divs1.length; i++) {
+	if (divs1[i].innerHTML !== '❌' && divs1[i].innerHTML !== '⭕') {
+		divs2.push(divs1[i]);	}
+             }
+             if (divs2.length > 0) {
+	let index = Math.floor(Math.random() * divs2.length);
+    if (divs2[index].innerHTML == '') {
+	divs2[index].innerHTML = '❌';
+    divs2[index].style.textShadow = '0 0 0 aqua';}
+    }
+}
+    </script>
+
+    </body>
+</html>
