@@ -41,32 +41,32 @@ QUnit.test( "Checks if the date is a valid one. ", function(assert) {
 
   QUnit.test( "Check if the date is invalid. ", function(assert) {
    const actual = strVar('32.13.2020');
-   assert.equal(actual, true);
+   assert.equal(actual, false);
   });
 
   QUnit.test( "Checks if the text lenght is invalid. ", function(assert) {
    const actual = strVar('29.026.20204');
-   assert.equal(actual, true);
+   assert.equal(actual, false);
   });
 
   QUnit.test( "Checks if the dot position is invalid. ", function(assert) {
    const actual = strVar('29.022.020');
-   assert.equal(actual, true);
+   assert.equal(actual, false);
   });
 
   QUnit.test( "Checks if the year is invalid. ", function(assert) {
    const actual = strVar('29.2.20205');
-   assert.equal(actual, true);
+   assert.equal(actual, false);
   });
 
   QUnit.test( "Checks if the month is invalid. ", function(assert) {
    const actual = strVar('29.13.2020');
-   assert.equal(actual, true);
+   assert.equal(actual, false);
   });
 
   QUnit.test( "Checks if the day is invalid. ", function(assert) {
    const actual = strVar('32.01.2020');
-   assert.equal(actual, true);
+   assert.equal(actual, false);
   });
 
   QUnit.test( "Checks if the date thats given is true. ", function(assert) {
