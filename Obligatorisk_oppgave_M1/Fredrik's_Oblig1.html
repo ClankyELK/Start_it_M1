@@ -14,28 +14,58 @@ QUnit.test( "Checks if the date is a valid one. ", function(assert) {
    assert.equal(actual, true);
   });
 
-  QUnit.test( "Checks if text lenght. ", function(assert) {
+  QUnit.test( "Checks if text lenght is valid. ", function(assert) {
    const actual = strVar('17.01.2020');
    assert.equal(actual, true);
   });
   
-  QUnit.test( "Checks if dot is correct. ", function(assert) {
+  QUnit.test( "Checks if dot position is valid. ", function(assert) {
    const actual = strVar('17.01.2020');
    assert.equal(actual, true);
   });
 
-  QUnit.test( "Checks if year is valid ", function(assert) {
+  QUnit.test( "Checks if year is valid. ", function(assert) {
    const actual = strVar('17.01.2020');
    assert.equal(actual, true);
   });
 
-  QUnit.test( "Checks if month is valid ", function(assert) {
+  QUnit.test( "Checks if month is valid. ", function(assert) {
    const actual = strVar('31.01.2020');
    assert.equal(actual, true);
   });
 
-  QUnit.test( "Checks if day is valid ", function(assert) {
+  QUnit.test( "Checks if day is valid. ", function(assert) {
    const actual = strVar('29.02.2020');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Check if the date is invalid. ", function(assert) {
+   const actual = strVar('32.13.2020');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if the text lenght is invalid. ", function(assert) {
+   const actual = strVar('29.026.20204');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if the dot position is invalid. ", function(assert) {
+   const actual = strVar('29.022.020');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if the year is invalid. ", function(assert) {
+   const actual = strVar('29.2.20205');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if the month is invalid. ", function(assert) {
+   const actual = strVar('29.13.2020');
+   assert.equal(actual, true);
+  });
+
+  QUnit.test( "Checks if the day is invalid. ", function(assert) {
+   const actual = strVar('32.01.2020');
    assert.equal(actual, true);
   });
     </script>

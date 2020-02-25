@@ -46,6 +46,3 @@ function isThisDayValid(validYear, validMonth, validDay) {               //funct
     validDay >= 1 && validDay <= 28 && validMonth == 2 ||
     isLeapYear(validYear, validMonth, validDay) ? true : false;
 }
-
-
-
