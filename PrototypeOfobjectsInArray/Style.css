@@ -1,0 +1,10 @@
+canvas {
+    border: 1px groove gray;
+    background-color: lightgray;
+}
+#oval {
+    width: 200px;
+    height: 100px;
+    background:gold;
+    border-radius: 100px / 50px;
+  }
